@@ -47,6 +47,12 @@ input[type="email"], input[type="url"], input[type="search"], input[type="tel"],
 select, textarea {
   border-radius: 2px;
   border-color: rgba(0, 0, 0, 0.84);
+  padding: 2px 4px 0 2px;
+}
+
+.btn {
+  padding: 2px 10px 1px;
+  margin-top: 1px;
 }
 
 .navbar .navbar-inner {
