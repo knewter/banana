@@ -1,0 +1,13 @@
+.nav-tabs {
+  border: 0;
+}
+.nav-tabs > li > a {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+  border: 0;
+  background-color: #222;
+}
