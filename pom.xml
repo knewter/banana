@@ -5,7 +5,7 @@
     <artifactId>est-banana</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>PE2E - EST - Bananar</name>
+    <name>PE2E - EST - BANANA</name>
     <build>
         <finalName>banana</finalName>
         <plugins>
