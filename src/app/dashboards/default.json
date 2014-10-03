@@ -290,9 +290,5 @@
     "load_elasticsearch_size": 20,
     "load_local": true,
     "hide": false
-  },
-  "solr": {
-    "server": "http://localhost:8983/solr/",
-    "core_name": "logstash_logs"
   }
 }
