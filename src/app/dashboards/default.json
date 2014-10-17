@@ -1,5 +1,5 @@
 {
-  "title": "Welcome Syslog Demo",
+  "title": "EST UI Analytics",
   "services": {
     "query": {
       "idQueue": [
@@ -7,7 +7,7 @@
       ],
       "list": {
         "0": {
-          "query": "error",
+          "query": "*:*",
           "alias": "",
           "color": "#7EB26D",
           "id": 0,
@@ -25,8 +25,8 @@
       ],
       "list": {
         "0": {
-          "from": "2014-01-29T21:45:46.000Z",
-          "to": "2014-02-28T22:30:10.897Z",
+          "from": "2014-04-06T06:45:46.000Z",
+          "to": "2014-04-08T21:56:36.891Z",
           "field": "event_timestamp",
           "type": "time",
           "mandate": "must",
@@ -74,14 +74,14 @@
           "timeformat": "",
           "refresh": {
             "enable": true,
-            "interval": 600,
+            "interval": 30,
             "min": 3
           },
           "filter_id": 0,
           "status": "Stable",
           "time": {
-            "from": "01/29/2014 13:45:46",
-            "to": "02/28/2014 14:30:10"
+            "from": "04/06/2014 01:45:46",
+            "to": "04/08/2014 16:56:36"
           }
         },
         {
@@ -93,31 +93,11 @@
           "query": "*:*",
           "pinned": true,
           "history": [
+            "*:*",
             "error"
           ],
           "remember": 10,
           "title": "Search"
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "100px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": true,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "This is the demonstration dashboard for Banana, a port of Kibana for Solr. This points to a collection called logstash\\_logs. If you followed the QuickStart instructions provided by the  the Solr Output Writer for LogStash, you will see example data here. \n\nTo build your own dashboards, first get time series data into a collection. Then you can begin with this dashboard and configure it to fit your needs.",
-          "style": {},
-          "title": "Welcome to Banana"
         }
       ]
     },
@@ -129,7 +109,7 @@
       "collapsable": true,
       "panels": [
         {
-          "span": 6,
+          "span": 8,
           "editable": true,
           "group": [
             "default"
@@ -140,16 +120,16 @@
           "value_field": null,
           "auto_int": true,
           "resolution": 100,
-          "interval": "12h",
-          "fill": 3,
-          "linewidth": 3,
+          "interval": "30m",
+          "fill": 1,
+          "linewidth": 1,
           "timezone": "browser",
           "spyable": true,
           "zoomlinks": true,
-          "bars": true,
+          "bars": false,
           "stack": true,
           "points": false,
-          "lines": false,
+          "lines": true,
           "legend": true,
           "x-axis": true,
           "y-axis": true,
@@ -161,7 +141,7 @@
               0
             ]
           },
-          "title": "System Log Messages",
+          "title": "Events",
           "intervals": [
             "auto",
             "1s",
@@ -185,7 +165,7 @@
         },
         {
           "error": false,
-          "span": 6,
+          "span": 4,
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
@@ -195,23 +175,23 @@
               0
             ]
           },
-          "field": "syslog_program",
+          "field": "action",
           "exclude": [],
           "missing": true,
-          "other": true,
+          "other": false,
           "size": 10,
           "order": "count",
           "style": {
             "font-size": "10pt"
           },
           "donut": true,
-          "tilt": true,
+          "tilt": false,
           "labels": true,
           "arrangement": "horizontal",
           "chart": "pie",
-          "counter_pos": "none",
+          "counter_pos": "above",
           "spyable": true,
-          "title": "Programs",
+          "title": "Actions",
           "time_field": "event_timestamp"
         }
       ]
@@ -245,8 +225,9 @@
           "overflow": "min-height",
           "fields": [
             "event_timestamp",
-            "syslog_program",
-            "message"
+            "action",
+            "employee_number",
+            "payload"
           ],
           "highlight": [],
           "sortable": true,
@@ -275,7 +256,7 @@
     "pattern": "[logstash-]YYYY.MM.DD",
     "default": "NO_TIME_FILTER_OR_INDEX_PATTERN_NOT_MATCHED"
   },
-  "style": "light",
+  "style": "dark",
   "panel_hints": true,
   "loader": {
     "save_gist": false,
