@@ -31,7 +31,7 @@ AjaxSolr.AbstractManager = AjaxSolr.Class.extend(
    */
   constructor: function (attributes) {
     AjaxSolr.extend(this, {
-      solrUrl: "http://"+window.location.hostname+":8080/solr",
+      solrUrl: "http://"+window.location.host+"/solr",
       proxyUrl: null,
       servlet: 'select',
       // The most recent response from Solr.
