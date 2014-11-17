@@ -1,0 +1,94 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input, button, select, textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.panelCont {
+  border-top: 0;
+}
+
+.row-button {
+  background: rgba(0, 0, 0, 0.2);
+  height: 21px;
+}
+
+.row-button:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.table td{
+  border: transparent;
+}
+
+.nav-tabs {
+  border: 0;
+}
+.nav-tabs > li > a {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+  border: 0;
+  background-color: #222;
+}
+
+.tooltip {
+  width: 150px;
+}
+
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],
+input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"],
+input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input,
+select, textarea {
+  border-radius: 2px;
+  border-color: rgba(0, 0, 0, 0.84);
+  padding: 2px 4px 0 2px;
+}
+
+.btn {
+  padding: 2px 10px 1px;
+  margin-top: 1px;
+}
+
+.navbar .navbar-inner {
+  background-image: none;
+}
+.navbar .brand {
+  text-transform: uppercase;
+}
+
+.panel-title, .row-text {
+  font-weight: normal;
+}
+
+.editor-title {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 125%;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  src: url('../font/sourcesanspro-light-webfont.eot');
+  src: url('../font/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/sourcesanspro-light-webfont.woff') format('woff'),
+       url('../font/sourcesanspro-light-webfont.ttf') format('truetype'),
+       url('../font/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../font/sourcesanspro-regular-webfont.eot');
+  src: url('../font/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/sourcesanspro-regular-webfont.woff') format('woff'),
+       url('../font/sourcesanspro-regular-webfont.ttf') format('truetype'),
+       url('../font/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

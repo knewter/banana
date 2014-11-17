@@ -13,4 +13,13 @@
             </fileset>
         </war>
     </target>
+    <target name="copyToSolr">
+        <echo message="Copying artifact file to solr."/>
+        <copy verbose="true"
+              todir="../USPTO_solr/solrcloud-working-dir/example1/solr-webapp/webapp/">
+            <fileset
+                    dir="target/"
+                    includes="banana.war" />
+        </copy>
+    </target>
 </project>

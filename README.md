@@ -1,12 +1,13 @@
 # Banana
 
 __NOTE__: You have reached the Banana repository. 
-The Banana project is a fork of Kibana 3, which can be found at [http://three.kibana.org](http://three.kibana.org)
+The Banana project is a fork of a fork, Kibana 3, which can be found at [http://three.kibana.org](http://three.kibana.org)
 The goal is to port the code to work with Apache Solr as a backend storage. 
  
 ## IMPORTANT
 
-Pull the repo from the "release" branch; version 1.0 is tagged as banana-1.0.
+Building for the EST/PASR project, pull from the "development" branch.
+If your building the original fork, pull the repo from the "release" branch; version 1.0 is tagged as banana-1.0.
 
 ## Overview
 
