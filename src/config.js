@@ -25,7 +25,7 @@ function (Settings) {
     // Which Solr's core store the logstash output?
     // solr_server: "http://localhost:8983/solr/",
     // solr: "http://localhost:8983/solr/logstash_logs",
-    solr: "http://"+window.location.hostname+":8080/solr",
+    solr: "http://"+window.location.hostname+"/solr",
     // solr_collection: "logstash_logs",
     solr_core: "logstash_logs",
 
