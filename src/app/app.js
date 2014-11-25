@@ -89,7 +89,30 @@ function (angular, $, _, appLevelRequire) {
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common["X-Requested-With"];
   }]);
-  
+
+  app.value("config_url", (document.location.hostname === "localhost" && document.location.port === "8080")
+    ? "http://localhost:8080/dirsearch/configs"
+    : "http://" + document.location.hostname + "/dirsearch/configs"
+  );
+
+  app.run(['$http', 'config_url', '$rootScope', function($http, config_url, $rootScope) {
+    $http({
+        method: "GET",
+        url: config_url,
+        responseType: "json",
+        headers: {
+         "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+      }).then(function(res) {
+          // go ahead and keep this on the $rootScope, that's ok, right? :)
+          console.debug("Config data retrieved", res.data);
+          $rootScope.configs = res.data.configs;
+          $rootScope.solrDefaultParams = res.data.solrDefaultParams;
+       }, function(err, status, headers, config){
+          console.error("failed to retrieve configs", err);
+      });
+  }]);
 
   // TODO: add ajax-solr ?
   var apps_deps = [
