@@ -29,6 +29,7 @@ function (angular, config, _) {
       // Make underscore.js available to views
       $scope._ = _;
       $scope.dashboard = dashboard;
+      $scope.dashboard.current.solr.server = config.solr;
       $scope.dashAlerts = alertSrv;
       alertSrv.clearAll();
 
