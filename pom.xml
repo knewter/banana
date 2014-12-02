@@ -26,7 +26,7 @@
                     <webXml>WEB-INF\web.xml</webXml>
                     <webResources>
                         <resource>
-                            <directory>${project.basedir}</directory>
+                            <directory>${project.basedir}/src</directory>
                             <!--<targetPath>/</targetPath>-->
                         </resource>
                     </webResources>
