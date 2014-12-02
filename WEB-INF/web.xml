@@ -1,0 +1,25 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <display-name>USPTO BANANA</display-name>
+    <!--security-constraint>
+        <display-name>USPTO PE2E</display-name>
+        <web-resource-collection>
+            <web-resource-name>webapp</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>EST_Examiner</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>SPNEGO</auth-method>
+        <realm-name>SPNEGO</realm-name>
+    </login-config>
+    <security-role>
+        <role-name>EST_Examiner</role-name>
+    </security-role-->
+</web-app>

@@ -1,3 +1,6 @@
 node_modules
 .aws-config.json
 dist
+
+#Ignore git commit id plugin
+src/main/resources/version.properties
