@@ -90,8 +90,8 @@ function (angular, $, _, appLevelRequire) {
     delete $httpProvider.defaults.headers.common["X-Requested-With"];
   }]);
 
-  app.value("config_url", document.location.port === "8080"
-    ? "http://" + document.location.hostname + ":8080/dirsearch/configs"
+  app.value("config_url", document.location.port !== ""
+    ? "http://" + document.location.hostname + ":" + document.location.port + "/dirsearch/configs"
     : "http://" + document.location.hostname + "/dirsearch/configs"
   );
 
