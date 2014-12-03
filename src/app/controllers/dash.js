@@ -10,7 +10,7 @@ function (angular, config, _) {
   var module = angular.module('kibana.controllers');
 
   module.controller('DashCtrl', function(
-    $scope, $route, ejsResource, sjsResource, fields, dashboard, alertSrv, panelMove) {
+    $scope, $route, ejsResource, sjsResource, fields, dashboard, alertSrv, panelMove, $rootScope, $timeout) {
     $scope.editor = {
       index: 0
     };
@@ -24,10 +24,12 @@ function (angular, config, _) {
     $scope.panelMoveOut = panelMove.onOut;
 
     $scope.init = function() {
+      config.solr = $rootScope.configs.solr_root_url;
       $scope.config = config;
       // Make underscore.js available to views
       $scope._ = _;
       $scope.dashboard = dashboard;
+      $scope.dashboard.current.solr.server = config.solr;
       $scope.dashAlerts = alertSrv;
       alertSrv.clearAll();
 
@@ -86,6 +88,8 @@ function (angular, config, _) {
       return _.isNull(_error) ? data : _error[1];
     };
 
-    $scope.init();
+    $timeout(function(){
+      $scope.init();
+    },100);
   });
 });

@@ -25,7 +25,9 @@ function (Settings) {
     // Which Solr's core store the logstash output?
     // solr_server: "http://localhost:8983/solr/",
     // solr: "http://localhost:8983/solr/logstash_logs",
-    solr: "http://localhost:8983/solr/",
+
+    //NOTE!!! This 'solr' is being overridden in dash.js and the value is coming from API Configs!!!!
+    solr: "http://"+window.location.hostname+"/solr/",
     // solr_collection: "logstash_logs",
     solr_core: "logstash_logs",
 
